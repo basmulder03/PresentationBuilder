@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔵 Running lint-staged (Prettier only on changed files)..."
+pnpm exec lint-staged
+
+echo "🟢 Checking TypeScript builds..."
+pnpm exec tsc --noEmit
