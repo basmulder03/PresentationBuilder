@@ -3,7 +3,7 @@ name: Build Electron App
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -13,17 +13,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: 'pnpm'
 
-      - name: Install pnpm
-        run: npm install -g pnpm
-
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build typescript
-        run: pnpm build
+      - name: Build TypeScript
+        run: pnpm run build
