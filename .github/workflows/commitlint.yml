@@ -34,4 +34,4 @@ jobs:
         run: pnpm install
 
       - name: Lint commit messages
-        run: wagoid/commitlint-github-action@v5
+        uses: wagoid/commitlint-github-action@v5
