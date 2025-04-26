@@ -60,7 +60,6 @@ my-electron-app/
 ├── tsconfig.json # TypeScript config
 ├── .gitignore # Ignored files
 ├── .gitattributes # Line-ending and file handling
-├── commitlint.config.js # Conventional commit rules
 └── README.md # Project documentation
 ```
 
